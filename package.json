@@ -1,0 +1,23 @@
+{
+  "name": "photoflow",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm --workspace @photoflow/desktop run dev",
+    "build": "npm --workspace @photoflow/desktop run build",
+    "build:win": "npm --workspace @photoflow/desktop run build:win",
+    "start": "npm --workspace @photoflow/desktop run start",
+    "typecheck": "npm --workspace @photoflow/desktop run typecheck",
+    "test": "npm --workspace @photoflow/desktop run test",
+    "backend:health": "node scripts/backend-health.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  }
+}
+

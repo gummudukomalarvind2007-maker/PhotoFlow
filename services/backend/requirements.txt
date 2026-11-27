@@ -1,0 +1,2 @@
+# Pillow is used only for local image metadata and thumbnails. It never writes to source media.
+Pillow>=10.0,<12.0

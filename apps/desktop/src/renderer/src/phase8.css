@@ -1,0 +1,544 @@
+.collections-page {
+  margin: 0 auto;
+  max-width: 1340px;
+  padding: 42px clamp(22px, 4vw, 58px) 34px;
+}
+
+.collections-header {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.collections-header h1 {
+  color: #f1f1f4;
+  font-size: clamp(27px, 3vw, 35px);
+  letter-spacing: -.055em;
+  line-height: 1.06;
+  margin: 0;
+}
+
+.collections-header p:not(.section-kicker) {
+  color: #858793;
+  font-size: 11px;
+  line-height: 1.55;
+  margin: 9px 0 0;
+  max-width: 620px;
+}
+
+.collection-tabs {
+  border-bottom: 1px solid #2a2b33;
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.collection-tabs button {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: #898b97;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 10px 3px;
+}
+
+.collection-tabs button.active {
+  border-bottom-color: #9e8cff;
+  color: #d3ccff;
+}
+
+.collection-tabs span {
+  background: #2a2a34;
+  border-radius: 8px;
+  color: #aaaab5;
+  font-family: ui-monospace, monospace;
+  font-size: 8px;
+  margin-left: 5px;
+  padding: 2px 6px;
+}
+
+.album-form {
+  align-items: end;
+  background: #1a1b21;
+  border: 1px solid #34313f;
+  border-radius: 9px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 14px 0 20px;
+  padding: 15px;
+}
+
+.album-form label {
+  color: #a4a5b0;
+  display: grid;
+  flex: 1 1 200px;
+  font-size: 9px;
+  gap: 6px;
+}
+
+.album-form label span {
+  color: #727480;
+  display: inline;
+  font-size: 8px;
+}
+
+.album-form input,
+.occasion-controls input,
+.occasion-controls select,
+.album-form select {
+  background: #121317;
+  border: 1px solid #34353e;
+  border-radius: 5px;
+  color: #e4e4eb;
+  font-size: 10px;
+  min-height: 34px;
+  outline: 0;
+  padding: 7px 9px;
+}
+
+.album-form input:focus,
+.occasion-controls input:focus,
+.occasion-controls select:focus {
+  border-color: #8879d5;
+}
+
+.album-form>div {
+  align-items: center;
+  display: flex;
+  gap: 9px;
+}
+
+.album-form .primary-button {
+  padding: 9px 12px;
+}
+
+.album-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+
+.album-tile {
+  background: #1a1b21;
+  border: 1px solid #2b2c35;
+  border-radius: 9px;
+  color: inherit;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  transition: border-color .15s, transform .15s;
+}
+
+.album-tile:hover,
+.occasion-card:hover {
+  border-color: #50466f;
+  transform: translateY(-2px);
+}
+
+.album-cover,
+.occasion-cover {
+  align-items: center;
+  background: linear-gradient(135deg, #292837, #1d2028);
+  color: #8d84b4;
+  display: flex;
+  height: 148px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.album-cover img,
+.occasion-cover img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.live-tag {
+  background: #282440e8;
+  border: 1px solid #564d83;
+  border-radius: 4px;
+  color: #c8bfff;
+  font-family: ui-monospace, monospace;
+  font-size: 7px;
+  letter-spacing: .08em;
+  padding: 4px 6px;
+  position: absolute;
+  right: 9px;
+  top: 9px;
+}
+
+.album-tile-copy {
+  padding: 11px 12px 12px;
+}
+
+.album-tile-copy strong {
+  color: #e0e0e7;
+  display: block;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.album-tile-copy p {
+  color: #858793;
+  font-size: 8px;
+  margin: 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.album-tile-copy>span {
+  color: #aba3dc;
+  font-size: 8px;
+}
+
+.collection-empty {
+  align-items: center;
+  background: #1a1b21;
+  border: 1px dashed #363741;
+  border-radius: 10px;
+  color: #898b97;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  gap: 10px;
+  justify-content: center;
+  line-height: 1.6;
+  margin-top: 16px;
+  min-height: 220px;
+  padding: 30px;
+  text-align: center;
+}
+
+.collection-empty .icon {
+  color: #a799ef;
+}
+
+.collection-empty h2 {
+  color: #e2e2e8;
+  font-size: 14px;
+  margin: 0;
+}
+
+.collection-empty p {
+  margin: 0;
+  max-width: 420px;
+}
+
+.collection-error {
+  margin: 10px 0;
+}
+
+.album-detail {
+  margin-top: 8px;
+}
+
+.album-detail-heading {
+  align-items: center;
+  border-bottom: 1px solid #2b2c34;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0 0 13px;
+}
+
+.album-detail-heading .section-kicker {
+  margin-bottom: 5px;
+}
+
+.album-detail-heading h2 {
+  color: #eeeeF2;
+  font-size: 20px;
+  letter-spacing: -.04em;
+  margin: 0;
+}
+
+.album-detail-heading p:not(.section-kicker) {
+  color: #858793;
+  font-size: 9px;
+  margin: 6px 0 0;
+}
+
+.collection-count {
+  background: #2c293e;
+  border-radius: 12px;
+  color: #c7bfff;
+  font-family: ui-monospace, monospace;
+  font-size: 9px;
+  padding: 6px 9px;
+  white-space: nowrap;
+}
+
+.album-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.danger-button {
+  color: #e4a29d;
+}
+
+.delete-confirm {
+  align-items: center;
+  background: #2a2022;
+  border: 1px solid #593c3c;
+  border-radius: 7px;
+  color: #dfc5c4;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 9px;
+  gap: 8px;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 9px 11px;
+}
+
+.album-form.inline {
+  margin: 12px 0;
+}
+
+.collection-media-grid {
+  display: grid;
+  gap: 13px;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  margin-top: 17px;
+}
+
+.collection-media-card {
+  background: #1a1b21;
+  border: 1px solid #2b2c35;
+  border-radius: 8px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.collection-media-preview {
+  align-items: center;
+  background: linear-gradient(135deg, #292837, #1d2028);
+  color: #8d84b4;
+  display: flex;
+  height: 132px;
+  justify-content: center;
+}
+
+.collection-media-preview img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.collection-media-copy {
+  padding: 9px 10px;
+}
+
+.collection-media-copy strong {
+  color: #dedfe5;
+  display: block;
+  font-size: 9px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.collection-media-copy p {
+  color: #858793;
+  font-size: 8px;
+  margin: 5px 0 0;
+}
+
+.collection-media-copy p span {
+  color: #555762;
+  margin: 0 4px;
+}
+
+.collection-media-copy .text-button {
+  margin: 7px 0 0 -4px;
+}
+
+.album-success {
+  background: #1c2922;
+  border: 1px solid #2d4938;
+  border-radius: 6px;
+  color: #a7d2b2;
+  font-size: 9px;
+  margin: 10px 0;
+  padding: 9px 11px;
+}
+
+.album-add-toolbar {
+  align-items: end;
+  background: #201f2b;
+  border: 1px solid #3a3553;
+  border-radius: 8px;
+  color: #c9c4dc;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 11px;
+}
+
+.album-add-toolbar>span {
+  font-size: 10px;
+  margin: 0 auto 8px 0;
+}
+
+.album-add-toolbar .filter-field {
+  min-width: 160px;
+}
+
+.media-select {
+  left: 8px;
+  position: absolute;
+  top: 8px;
+  z-index: 1;
+}
+
+.media-select input {
+  accent-color: #9686ec;
+  height: 16px;
+  width: 16px;
+}
+
+.occasion-controls {
+  align-items: end;
+  background: #1a1b21;
+  border: 1px solid #292b34;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 8px 0 20px;
+  padding: 12px;
+}
+
+.occasion-controls .filter-field {
+  min-width: 150px;
+}
+
+.occasion-timeline {
+  display: grid;
+  gap: 20px;
+}
+
+.occasion-year h2 {
+  border-bottom: 1px solid #2c2d36;
+  color: #d8d6e5;
+  font-size: 16px;
+  letter-spacing: -.03em;
+  margin: 0 0 11px;
+  padding: 0 0 9px;
+}
+
+.occasion-list {
+  display: grid;
+  gap: 10px;
+}
+
+.occasion-card {
+  align-items: center;
+  background: #1a1b21;
+  border: 1px solid #2b2c35;
+  border-radius: 8px;
+  color: #999ba7;
+  display: flex;
+  gap: 12px;
+  min-width: 0;
+  padding: 8px;
+  text-align: left;
+  transition: border-color .15s, transform .15s;
+}
+
+.occasion-cover {
+  border-radius: 5px;
+  flex: 0 0 75px;
+  height: 59px;
+}
+
+.occasion-card-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.occasion-card-copy strong {
+  color: #e0e0e7;
+  font-size: 10px;
+}
+
+.occasion-card-copy small {
+  color: #858793;
+  font-size: 8px;
+}
+
+.date-source-tag {
+  color: #a89cdb;
+  font-size: 8px;
+}
+
+.date-source-tag.indexed,
+.occasion-date-source.indexed {
+  color: #d4ae83;
+}
+
+.occasion-card>.icon {
+  margin-left: auto;
+  transform: rotate(90deg);
+}
+
+.occasion-date-source {
+  color: #a89cdb;
+  font-size: 9px;
+  margin: 12px 0 0;
+}
+
+@media (max-width: 620px) {
+  .collections-page {
+    padding: 27px 16px 24px;
+  }
+
+  .collections-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .album-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .album-cover {
+    height: 112px;
+  }
+
+  .album-tile-copy {
+    padding: 9px;
+  }
+
+  .album-detail-heading {
+    align-items: flex-start;
+  }
+
+  .collection-media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .collection-media-preview {
+    height: 105px;
+  }
+
+  .album-add-toolbar>span {
+    flex: 1 1 100%;
+  }
+}

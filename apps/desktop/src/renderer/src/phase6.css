@@ -1,0 +1,88 @@
+.library-controls {
+  align-items: end;
+  background: #1a1b21;
+  border: 1px solid #292b34;
+  border-radius: 9px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(110px, 1fr));
+  margin-top: 20px;
+  padding: 14px;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.filter-field > span {
+  color: #858793;
+  font-family: ui-monospace, monospace;
+  font-size: 8px;
+  letter-spacing: .04em;
+}
+
+.filter-field input,
+.filter-field select {
+  background: #121317;
+  border: 1px solid #34353f;
+  border-radius: 5px;
+  color: #d9dae1;
+  font-size: 10px;
+  height: 32px;
+  min-width: 0;
+  outline: none;
+  padding: 0 8px;
+  width: 100%;
+}
+
+.filter-field input:focus,
+.filter-field select:focus {
+  border-color: #8e80dd;
+}
+
+.filter-field input::placeholder {
+  color: #696b76;
+}
+
+.clear-filters {
+  height: 32px;
+  justify-self: start;
+  white-space: nowrap;
+}
+
+.clear-filters:disabled {
+  cursor: default;
+  opacity: .45;
+}
+
+@media (max-width: 950px) {
+  .library-controls {
+    grid-template-columns: repeat(3, minmax(110px, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .library-controls {
+    gap: 9px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 16px;
+    padding: 11px;
+  }
+
+  .filter-field input,
+  .filter-field select {
+    font-size: 9px;
+    padding: 0 6px;
+  }
+
+  .clear-filters {
+    grid-column: 1 / -1;
+  }
+
+  .top-actions .search {
+    width: min(60vw, 260px);
+  }
+}
